@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML e CSS</title>
+
+    <!-- CSS no head -->
+    <style>
+        body {
+            padding-bottom: 500px;
+        }
+    </style>
 </head>
 <body>
+    <!-- COMENTÁRIO EM HTML -->
+    <!-- Títulos -->
+    <h1>Título mais importante da página</h1>
+    <h2>sub-título</h2>
+    <h3>sub-título</h3>
+    <h4>sub-título</h4>
+    <h5>sub-título</h5>
+    <h6>sub-título</h6>
+
+    <!-- Parágrafos-->
+    <p> Algum texto qualquer
+        <br> <!-- quebra de linha-->
+        <br>
+        <br>
+        Dasfdlasfjlsdjflkfsajfkslçfj jfdkslç fjal
+    </p>
+
+    <!-- Links -->
+    <a href="https://www.flamengo.com.br/" >flamengo</a>
+    <a href="https://www.flamengo.com.br/" target="=blank">Flamengo em nova aba</a>
+
+    <!-- QUEBRA DE LINHAS -->
+    <h2>Título</h2>
+    <p>Algum texto <br> qualquer </p>
+    <hr>
+    <h2>Título</h2>
+    <p>Algum texto qualquer</p>
+
+    <!-- Imagem-->
+    <!-- -->
+    <img src="https://img.freepik.com/fotos-gratis/as-belas-estrelas-brilhando-no-ceu-noturno_181624-622.jpg" alt="">
+
+    <!-- IMAGEM DE DENTRO DO PROJETO-->
+    <img width="100px" height="100px" src="./assents/Logo.png" alt="Logo da linguagem marcação HTML">
+    <hr>
     
+    <!--FORMULÁRIOS-->
+    <form>
+        <h2>Formulário</h2>
+        <label for="">None</label>
+        <input type="text" placeholder="João Gabriel">
+        <br>
+        <label>CPF</label>
+        <input type="text" placeholder="0123680463201"> 
+        <br>
+        <label>EMAIL</label>
+        <input type="text" placeholder="joaogabriel@gmail">
+        <br>
+        <label>Telefone</label>
+        <input type="number" placeholder="1238615321">
+        <br>
+        <button type="submit">ENVIAR</button>
+        <button type="reset">LIMPAR</button>
+
+    </form>
+    <hr>
+
+    <!--Listas-->
+<!--Lista não ordenada-->
+    <ul>
+        <li>Maçã</li>
+        <li>Melancia</li>
+        <li>Banana</li>
+        <li>Uva</li>
+    </ul>
+    
+<!--Lista ordenada-->
+    <ol>
+        <li>Estudar HTML</li>
+        <li>Estudar CSS</li>
+        <li>Estudar JavaScript</li>
+    </ol>
+
+    <!-- TABELA -->
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome:</th>
+                <th>Id:</th>
+                <th>Email:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>1</td>
+                <td>joaogabriel@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Ana Carolina</td>
+                <td>2</td>
+                <td>anacarolina@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Alfredo</td>
+                <td>3</td>
+                <td>alfredo@gmail.com</td>
+            </tr>
+        </tbody>
+
+    </table>
+
 </body>
 </html>
