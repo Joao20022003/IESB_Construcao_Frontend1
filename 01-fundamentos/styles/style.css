@@ -1,0 +1,77 @@
+/* Reset ao CSS Padrão dos Itens */
+* {
+    margin: 0 auto;
+}
+/* Selecionado Tag */
+body {
+    padding-bottom: 500px;
+} 
+
+h2 {
+    font-size: 22px;
+    color: blue;
+}
+
+h3 {
+    color: rgb(255, 0, 0);
+}
+/* Selecionado classe */
+.meu-titulo {
+    color: chartreuse;
+}
+/* Selecionando localizador */
+#ultimo-titulo {
+    color: darkgreen;
+}
+
+.fundo-azul{
+    background-color: blue;
+}
+
+.texto-pequeno, #meu-paragrafo {
+    font-size: 20px;
+}
+
+#meu-div {
+    background-image: url(../assents/imagem_fundo.jpg);
+    padding: 50px;
+}
+
+#altura-largura {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+#div-espacamento {
+    background-color: blueviolet;
+    padding: 20px 10px 15px 20px;
+}
+
+#div-margem {
+    background-color: burlywood;
+    margin: 30px 15px 30px 15px;
+}
+
+#div-borda {
+    background-color: cornflowerblue;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border: 4px solid black;
+}
+
+#div-arredondamento-borda{
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border: 4px solid rgb(0, 255, 115);
+    border-radius: 10px;
+}
+
+.meu-texto{
+    background-color: chocolate;
+    text-align: center;
+    text-decoration: solid;
+}
