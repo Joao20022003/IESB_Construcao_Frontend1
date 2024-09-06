@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Usuários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        td {
+            vertical-align: top;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <a href="./tabelas.html">
+    <h1>Tabela de Usuários Cadastrados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Sexo</th>
+                <th>UF</th>
+                <th>Hobbies</th>
+                <th>Observação</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Os dados serão inseridos aqui -->
+        </tbody>
+    </table>
+    <a href="index.html" class="btn">Voltar</a>
+    <button id="clearBtn" class="btn btn-danger">Excluir Todos</button>
+
+    <script>
+        // Função para carregar e exibir os dados
+        function loadTableData() {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = ''; // Limpa o conteúdo da tabela
+
+            if (users.length > 0) {
+                users.forEach(user => {
+                    const row = `
+                        <tr>
+                            <td>${user.name}</td>
+                            <td>${user.phone}</td>
+                            <td>${user.email}</td>
+                            <td>${user.gender}</td>
+                            <td>${user.state}</td>
+                            <td>${user.hobbies.join(', ')}</td>
+                            <td>${user.remarks}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } else {
+                tableBody.innerHTML = '<tr><td colspan="7">Nenhum usuário cadastrado.</td></tr>';
+            }
+        }
+
+        // Carrega a tabela ao abrir a página
+        loadTableData();
+
+        // Adiciona o evento de clique para o botão de excluir todos
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            if (confirm('Você realmente deseja excluir todos os usuários?')) {
+                localStorage.removeItem('users'); // Remove todos os dados do localStorage
+                loadTableData(); // Recarrega a tabela para mostrar a mensagem de nenhum dado
+            }
+        });
+    </script>
+</body>
+</html>
